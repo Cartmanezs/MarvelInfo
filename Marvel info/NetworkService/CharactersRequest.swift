@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum CharacterError: Error {
+    case noDataAvailable
+    case canNotProcessData
+}
+
 struct CharactersRequest {
     let resourceURL: URL
     let APIKEY = "7fe5f1ccd15a5b491fc23e8094c8f18d"
@@ -19,21 +24,26 @@ struct CharactersRequest {
         
         self.resourceURL = resourceURL
     }
+        
     
-    func getCharacters(completion: @escaping(Result<[CharactersData], Error>) -> Void) {
+    func getCharacters(completion: @escaping(Result<[CharactersInfo], CharacterError>) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: resourceURL) {data, _, _ in
-            guard let jsonData = data else { print("error")
+            
+            guard let jsonData = data else {
+                completion(.failure(.noDataAvailable))
                 return }
             do {
                 let decoder = JSONDecoder()
                 let charactersResponse = try decoder.decode(CharactersResponse.self, from: jsonData)
-                let charachterData = charactersResponse.response.characters
-                completion(.success(charachterData))
+                let charachterInfo = charactersResponse.response.characters
+                completion(.success(charachterInfo))
+               // completion(.success(charachterData!))
             } catch {
-                print("THERE IS NO JSON DATA")
+                completion(.failure(.canNotProcessData))
             }
         }
         dataTask.resume()
 
     }
+
 }

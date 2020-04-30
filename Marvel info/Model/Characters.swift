@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct CharactersData: Decodable {
-    let characters:[CharactersInfo]?
+struct CharactersResponse: Decodable {
+    var response: Characters
+}
+
+struct Characters: Decodable {
+    let characters:[CharactersInfo]
 }
 
 

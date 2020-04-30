@@ -10,6 +10,8 @@ import UIKit
 
 class HeroNameTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var heroNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
