@@ -16,7 +16,6 @@ struct Characters: Decodable {
     let characters:[CharactersInfo]
 }
 
-
 struct CharactersInfo: Decodable {
     let name: String?
     let description: String?

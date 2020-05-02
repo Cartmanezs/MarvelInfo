@@ -8,13 +8,8 @@
 
 import Foundation
 
-
-enum CharacterError: Error {
-    case noDataAvailable
-    case canNotProcessData
-}
-
-struct CharactersRequest {
+class CharactersRequest {
+    
     let resourceURL: URL
     let APIKEY = "7fe5f1ccd15a5b491fc23e8094c8f18d"
     
@@ -25,26 +20,18 @@ struct CharactersRequest {
         
         self.resourceURL = resourceURL
     }
-        
     
-    func getCharacters(completion: @escaping(Result<[CharactersInfo], CharacterError>) -> Void) {
-        let dataTask = URLSession.shared.dataTask(with: resourceURL) {data, _, _ in
-            
-            guard let jsonData = data else {
-                completion(.failure(.noDataAvailable))
-                return }
-            do {
-                let decoder = JSONDecoder()
-                let charactersResponse = try decoder.decode(CharactersResponse.self, from: jsonData)
-                let charachterInfo = charactersResponse.response.characters
-                completion(.success(charachterInfo))
-               // completion(.success(charachterData!))
-            } catch {
-                completion(.failure(.canNotProcessData))
-            }
-        }
+    func genericFetch<T: Decodable>(resourceURL: URL, modelType: T.Type,  completion:(T)) -> Void {
+        
+        let dataTask = URLSession.shared.dataTask(with: resourceURL) { (data, response, error) in
+            guard let data = data else { return }
+                do {
+                    let result = try JSONDecoder().decode(T.self, from: data)
+                  //  completion(result)
+                } catch {
+                    print("error")
+                }
+             }
         dataTask.resume()
-
     }
-
 }
