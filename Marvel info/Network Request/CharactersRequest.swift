@@ -20,18 +20,27 @@ class CharactersRequest {
         
         self.resourceURL = resourceURL
     }
-    
-    func genericFetch<T: Decodable>(resourceURL: URL, modelType: T.Type,  completion:(T)) -> Void {
-        
+
+    func getCharacters<T: Decodable>(data: String, completion: @escaping (Result<T, Error>) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: resourceURL) { (data, response, error) in
-            guard let data = data else { return }
-                do {
-                    let result = try JSONDecoder().decode(T.self, from: data)
-                  //  completion(result)
-                } catch {
-                    print("error")
+            if let error = error {
+                print("error: \(error.localizedDescription)")
+            } else {
+                if let response = response as? HTTPURLResponse {
+                    print("status code: \(response.statusCode)")
                 }
-             }
+            }
+            if let data = data,
+               let dataString = String(data: data, encoding: .utf8) {
+                    do {
+                        print("data: \(dataString)")
+                        let model = try JSONDecoder().decode(T.self, from: data)
+                        completion(.success(model))
+                    } catch {
+                        completion(.failure(error))
+                    }
+            }
+        }
         dataTask.resume()
     }
 }
