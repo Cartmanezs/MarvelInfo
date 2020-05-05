@@ -18,38 +18,6 @@
             endingLineNumber = "30"
             landmarkName = "getCharacters(completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8003AA8C-CA2F-457E-8B35-8CEA32ADB2DB - 37f410f0bbd2eb15"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Marvel_info.CharactersRequest.getCharacters(completion: (Swift.Result&lt;Swift.Array&lt;Marvel_info.CharactersInfo&gt;, Marvel_info.CharacterError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Marvel info"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/SWIFTBUSSINESS/Marvel%20info/Marvel%20info/NetworkService/CharactersRequest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "101">
-               </Location>
-               <Location
-                  uuid = "8003AA8C-CA2F-457E-8B35-8CEA32ADB2DB - d536f3e0e2006c20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Marvel_info.CharactersRequest.getCharacters(completion: (Swift.Result&lt;Swift.Array&lt;Marvel_info.CharactersInfo&gt;, Marvel_info.CharacterError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Marvel info"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Documents/SWIFTBUSSINESS/Marvel%20info/Marvel%20info/NetworkService/CharactersRequest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "115">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -81,22 +49,6 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "getCharacters(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "156401E6-C9D3-4081-8CC6-CF130833FF29"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Marvel info/CharactersTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
