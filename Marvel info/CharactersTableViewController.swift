@@ -2,6 +2,7 @@
 //  CharactersTableViewController.swift
 //  Marvel info
 //
+
 //  Created by Ingvar on 01.05.2020.
 //  Copyright © 2020 Igor. All rights reserved.
 //
@@ -15,6 +16,7 @@ class CharactersTableViewController: UITableViewController {
     }
     
     var listOfCharachers:[CharactersInfo] = []
+
 
     // MARK: - Table view data source
 
