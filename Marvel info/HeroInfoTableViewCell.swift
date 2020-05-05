@@ -10,7 +10,16 @@ import UIKit
 
 class HeroInfoTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var heroNameLabel: UILabel!
+    @IBOutlet private weak var heroNameLabel: UILabel!
+    
+    var heroName: String? {
+        set {
+            heroNameLabel.text = newValue
+        }
+        get {
+            return heroNameLabel.text
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

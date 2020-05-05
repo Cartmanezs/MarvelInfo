@@ -13,10 +13,10 @@ struct CharactersResponse: Decodable {
 }
 
 struct Characters: Decodable {
-    let characters:[CharactersInfo]
+    let characters:[CHARACTERSINFO]
 }
 
-struct CharactersInfo: Decodable {
+struct CHARACTERSINFO: Decodable {
     let name: String?
     let description: String?
 }
