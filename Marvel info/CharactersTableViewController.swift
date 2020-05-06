@@ -15,7 +15,7 @@ class CharactersTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    var characters:[CHARACTERSINFO] = []
+    var characters: [CHARACTERSINFO] = []
 
 
     // MARK: - Table view data source
