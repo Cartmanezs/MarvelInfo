@@ -10,19 +10,11 @@ import Foundation
 
 class CharactersRequest {
     
-    static let shared = CharactersRequest()
+    static let APIKEY = "7fe5f1ccd15a5b491fc23e8094c8f18d"
+    static let resourceString = "http://gateway.marvel.com/v1/public/characters?api_key=\(APIKEY)"
 
-    let resourceURL: URL
-    let APIKEY = "7fe5f1ccd15a5b491fc23e8094c8f18d"
-
-    private init?() {
-        let resourceString = "http://gateway.marvel.com/v1/public/characters?api_key=\(APIKEY)"
-        guard let resourceURL = URL(string: resourceString) else { print("URL not found")
-            return nil
-        }
-        self.resourceURL = resourceURL
-    }
-
+    let resourceURL: URL = URL(string: resourceString) ?? URL(string: "Error 404 - not found")!
+    
     func genericFetch<T: Decodable>(completion: @escaping (Result<T, Error>) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: resourceURL) { (data, response, error) in
             if let error = error {

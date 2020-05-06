@@ -15,7 +15,7 @@ class CharactersTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    var listOfCharachers:[CHARACTERSINFO] = []
+    var characters:[CHARACTERSINFO] = []
 
 
     // MARK: - Table view data source
@@ -32,7 +32,7 @@ class CharactersTableViewController: UITableViewController {
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HeroInfoTableViewCell
        
-        let character = listOfCharachers[indexPath.row]
+        let character = characters[indexPath.row]
         cell.heroName = character.name
         
         return cell
