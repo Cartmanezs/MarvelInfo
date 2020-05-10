@@ -19,18 +19,14 @@ class CharactersRequest {
         self.resourceURL = resourceURL
     }
 
-    func genericFetch<T: Decodable>(completion: @escaping (Result<T, Error>) -> Void) {
+    func genericFetch<T: Decodable>(completion: @escaping (T) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: resourceURL) { (data, response, error) in
-            if let error = error {
-                completion(.failure(error))
-            }
-    
-            if let data = data {
+            if let data = data, data.count != 0, error == nil {
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(model))
+                    completion(model)
                 } catch {
-                    completion(.failure(error))
+                    print("error")
                 }
             }
         }

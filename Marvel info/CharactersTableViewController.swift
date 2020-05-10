@@ -19,16 +19,11 @@ class CharactersTableViewController: UITableViewController {
     var characters: [CHARACTERSINFO] = []
     
     private func getCharacters() {
-        CharactersRequest.shared.genericFetch(completion: {  [unowned self](charecterResult: Result<CHARACTERSINFO,Error>) -> Void in
-            charecterResult.flatMap { (character) -> Result<CHARACTERSINFO, Error> in
-                return .success(character)
-            }
-            guard let characters =  try? charecterResult.get() else { return }
-            self.characters = [characters]
-
-            self.tableView.reloadData()
-        })
-        
+        CharactersRequest.shared.genericFetch { (characters: [CHARACTERSINFO]?) in
+            guard let characters = characters else { return }
+            self.characters = characters
+        }
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
