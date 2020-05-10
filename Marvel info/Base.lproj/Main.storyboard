@@ -23,15 +23,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-JK-0rH">
-                                            <rect key="frame" x="186" y="11.5" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="30" y="13" width="35.5" height="17.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="TSn-JK-0rH" firstAttribute="centerX" secondItem="3If-HI-3oZ" secondAttribute="centerX" id="ob4-F1-7Gx"/>
-                                        <constraint firstItem="TSn-JK-0rH" firstAttribute="centerY" secondItem="3If-HI-3oZ" secondAttribute="centerY" id="sdQ-Mg-BLp"/>
+                                        <constraint firstItem="TSn-JK-0rH" firstAttribute="leading" secondItem="3If-HI-3oZ" secondAttribute="leadingMargin" constant="10" id="TDi-do-M26"/>
+                                        <constraint firstItem="TSn-JK-0rH" firstAttribute="top" secondItem="3If-HI-3oZ" secondAttribute="topMargin" constant="2" id="qUc-GU-m9m"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="TSn-JK-0rH" secondAttribute="bottom" constant="2" id="zxK-FO-QfU"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

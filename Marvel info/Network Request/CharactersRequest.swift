@@ -10,6 +10,7 @@ import Foundation
 
 class CharactersRequest {
     
+     static let shared = CharactersRequest()
      var resourceURL: URL
      let resourceString = "http://gateway.marvel.com/v1/public/characters?api_key=7fe5f1ccd15a5b491fc23e8094c8f18d"
     
