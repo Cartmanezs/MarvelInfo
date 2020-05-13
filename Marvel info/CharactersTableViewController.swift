@@ -11,19 +11,17 @@ import UIKit
 
 class CharactersTableViewController: UITableViewController {
 
+    private var dataFetcherService = DataFetcherService()
+    var characters: [CharactersInfo?] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCharacters()
-    }
-    
-    var characters: [CHARACTERSINFO] = []
-    
-    private func getCharacters() {
-        CharactersRequest.shared.genericFetch { (characters: [CHARACTERSINFO]?) in
-            guard let characters = characters else { return }
+        
+        dataFetcherService.fetchCharacters { [weak self] (characters) in
+            guard let `self` = self, let characters = characters?.data?.results else { return }
             self.characters = characters
+            self.tableView.reloadData()
         }
-        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -33,11 +31,18 @@ class CharactersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HeroInfoTableViewCell
+    
         let character = characters[indexPath.row]
-        cell.heroName = character.name
+        cell.heroName = character?.name
+        cell.descriptionCharacter = character?.description
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if let destination = segue.destination as? SecondViewController {
+            destination.character = characters[(tableView.indexPathForSelectedRow?.row)!]
+          }
+      }
 }

@@ -11,6 +11,8 @@ import UIKit
 class HeroInfoTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var heroNameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var heroImageView: UIImageView!
     
     var heroName: String? {
         set {
@@ -21,6 +23,15 @@ class HeroInfoTableViewCell: UITableViewCell {
         }
     }
     
+    var descriptionCharacter: String? {
+        set {
+            descriptionLabel.text = newValue
+        }
+        get {
+            return descriptionLabel.text
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
