@@ -73,6 +73,34 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CE8C762C246EC53000197E0F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE67F49F245BFFF300B7E6BF /* CharactersTableViewController.swift */,
+				CED10A91246AE9DE005DB37F /* SecondViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE8C762D246EC5EF00197E0F /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC287B2459CCF700CD243F /* AppDelegate.swift */,
+				CEEC28842459CCF800CD243F /* Assets.xcassets */,
+				CEEC287D2459CCF700CD243F /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		CE8C762E246EC61F00197E0F /* IBuiled */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC28812459CCF700CD243F /* Main.storyboard */,
+				CEEC28862459CCF800CD243F /* LaunchScreen.storyboard */,
+			);
+			path = IBuiled;
+			sourceTree = "<group>";
+		};
 		CEBD8C702469E77400D2FAD8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,16 +142,12 @@
 		CEEC287A2459CCF700CD243F /* Marvel info */ = {
 			isa = PBXGroup;
 			children = (
-				CEEC287B2459CCF700CD243F /* AppDelegate.swift */,
-				CEEC287D2459CCF700CD243F /* SceneDelegate.swift */,
+				CE8C762D246EC5EF00197E0F /* SupportFiles */,
 				CEBD8C702469E77400D2FAD8 /* Services */,
-				CE67F49F245BFFF300B7E6BF /* CharactersTableViewController.swift */,
-				CED10A91246AE9DE005DB37F /* SecondViewController.swift */,
+				CE8C762C246EC53000197E0F /* ViewControllers */,
 				CE67F4A1245C001600B7E6BF /* HeroInfoTableViewCell.swift */,
-				CEEC28812459CCF700CD243F /* Main.storyboard */,
-				CEEC28842459CCF800CD243F /* Assets.xcassets */,
-				CEEC28862459CCF800CD243F /* LaunchScreen.storyboard */,
 				CEEC28892459CCF800CD243F /* Info.plist */,
+				CE8C762E246EC61F00197E0F /* IBuiled */,
 			);
 			path = "Marvel info";
 			sourceTree = "<group>";

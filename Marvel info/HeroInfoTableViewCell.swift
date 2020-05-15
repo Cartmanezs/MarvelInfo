@@ -12,7 +12,7 @@ class HeroInfoTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var heroNameLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var heroImageView: UIImageView!
+    @IBOutlet weak var heroImageView: UIImageView!
     
     var heroName: String? {
         set {

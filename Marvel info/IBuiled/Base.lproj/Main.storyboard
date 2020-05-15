@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HQN-NF-Vky">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,38 +12,38 @@
             <objects>
                 <tableViewController id="YdS-ST-Szk" customClass="CharactersTableViewController" customModule="Marvel_info" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gS5-2N-Oho">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="qjp-fM-rvd" customClass="HeroInfoTableViewCell" customModule="Marvel_info" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="75.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qjp-fM-rvd" id="3If-HI-3oZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="NpS-92-Drh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="NpS-92-Drh">
+                                            <rect key="frame" x="5" y="0.0" width="370" height="75.5"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mystery" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-Ui-MZG">
-                                                    <rect key="frame" x="0.0" y="0.5" width="60" height="60"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fed-Ui-MZG">
+                                                    <rect key="frame" x="0.0" y="0.5" width="50" height="75"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="7Xd-mS-XOH"/>
-                                                        <constraint firstAttribute="height" constant="60" id="OOM-Sv-m6e"/>
+                                                        <constraint firstAttribute="width" constant="50" id="7Xd-mS-XOH"/>
+                                                        <constraint firstAttribute="height" constant="75" id="OOM-Sv-m6e"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EmD-a9-zPi">
-                                                    <rect key="frame" x="81" y="4" width="333" height="52.5"/>
+                                                    <rect key="frame" x="61" y="11.5" width="309" height="52.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-JK-0rH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="333" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="309" height="24"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOl-8z-xuz">
-                                                            <rect key="frame" x="0.0" y="32" width="333" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="32" width="309" height="20.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="NpS-92-Drh" secondAttribute="trailing" id="1PQ-yi-cYs"/>
-                                        <constraint firstItem="NpS-92-Drh" firstAttribute="leading" secondItem="3If-HI-3oZ" secondAttribute="leading" id="No6-3x-DYS"/>
+                                        <constraint firstItem="NpS-92-Drh" firstAttribute="leading" secondItem="3If-HI-3oZ" secondAttribute="leading" constant="5" id="dQk-dG-PgP"/>
                                         <constraint firstItem="NpS-92-Drh" firstAttribute="top" secondItem="3If-HI-3oZ" secondAttribute="top" id="oqh-Ht-R6N"/>
                                         <constraint firstAttribute="bottom" secondItem="NpS-92-Drh" secondAttribute="bottom" id="pjC-OR-Qlm"/>
                                     </constraints>
@@ -84,20 +84,27 @@
             <objects>
                 <viewController id="TJd-ej-VVy" customClass="SecondViewController" customModule="Marvel_info" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bFD-ag-UFq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-E2-9y2">
-                                <rect key="frame" x="20" y="188" width="374" height="674"/>
+                                <rect key="frame" x="62.5" y="64" width="250" height="608"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="teW-Yr-Ydz">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="156"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="156" id="JCa-0H-TMf"/>
+                                            <constraint firstAttribute="width" constant="250" id="Qap-TF-Nq1"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxP-7k-00S">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="302"/>
+                                        <rect key="frame" x="0.0" y="226" width="250" height="156"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJN-ip-NCV">
-                                        <rect key="frame" x="0.0" y="372" width="374" height="302"/>
+                                        <rect key="frame" x="0.0" y="452" width="250" height="156"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -107,16 +114,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="S20-VJ-rmm" firstAttribute="bottom" secondItem="pQo-E2-9y2" secondAttribute="bottom" id="AnV-k6-pn9"/>
-                            <constraint firstItem="S20-VJ-rmm" firstAttribute="trailing" secondItem="pQo-E2-9y2" secondAttribute="trailing" constant="20" id="vZq-Sz-laq"/>
-                            <constraint firstItem="pQo-E2-9y2" firstAttribute="top" secondItem="S20-VJ-rmm" secondAttribute="top" constant="100" id="wcE-tn-OXB"/>
-                            <constraint firstItem="pQo-E2-9y2" firstAttribute="leading" secondItem="S20-VJ-rmm" secondAttribute="leading" constant="20" id="yK7-tM-rDr"/>
+                            <constraint firstItem="pQo-E2-9y2" firstAttribute="centerX" secondItem="bFD-ag-UFq" secondAttribute="centerX" id="KZl-wM-2iX"/>
+                            <constraint firstItem="pQo-E2-9y2" firstAttribute="top" secondItem="S20-VJ-rmm" secondAttribute="top" constant="20" id="oRV-Hp-e0U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S20-VJ-rmm"/>
                     </view>
                     <navigationItem key="navigationItem" id="y7u-Ln-YLp"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="oJN-ip-NCV" id="Mbe-AQ-GJ6"/>
+                        <outlet property="heroImage" destination="teW-Yr-Ydz" id="kPU-LO-YfT"/>
                         <outlet property="nameLabel" destination="UxP-7k-00S" id="1tz-Dz-mwU"/>
                     </connections>
                 </viewController>
@@ -130,7 +136,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HQN-NF-Vky" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eJy-yU-tHP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -143,7 +149,4 @@
             <point key="canvasLocation" x="243.47826086956525" y="-219.64285714285714"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mystery" width="1192" height="1148"/>
-    </resources>
 </document>

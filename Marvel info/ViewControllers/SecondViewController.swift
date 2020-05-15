@@ -12,15 +12,19 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-
-    var character: CharactersInfo?
+    @IBOutlet weak var heroImage: UIImageView!
     
+    var character: CharactersInfo?
+    var characterVC = CharactersTableViewController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let character = self.character {
             nameLabel.text = character.name
             descriptionLabel.text = character.description
+            characterVC.setImage(heroImage: heroImage, character: character)
         }
     }
 }
+

@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CharactersTableViewController: UITableViewController {
 
@@ -31,15 +32,27 @@ class CharactersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HeroInfoTableViewCell
-    
-        let character = characters[indexPath.row]
-        cell.heroName = character?.name
-        cell.descriptionCharacter = character?.description
+         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HeroInfoTableViewCell
         
-        return cell
+         if let character = self.characters[indexPath.row] {
+            cell.heroName = character.name
+            cell.descriptionCharacter = character.description
+            
+            setImage(heroImage: cell.heroImageView, character: character)
+        }
+         return cell
     }
     
+        func setImage(heroImage: UIImageView, character: CharactersInfo?) {
+            guard let character = character else { return }
+            let fullPath = (character.thumbnail?.path ?? "") + "/portrait_xlarge." + (character.thumbnail?.imageExtension ?? "jpg")
+            if let imageUrl = URL(string: fullPath) {
+                 heroImage.sd_setImage(with: imageUrl)
+             } else {
+                 heroImage.image = nil
+             }
+        }
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
           if let destination = segue.destination as? SecondViewController {
             destination.character = characters[(tableView.indexPathForSelectedRow?.row)!]
