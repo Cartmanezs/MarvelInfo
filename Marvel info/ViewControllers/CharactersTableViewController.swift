@@ -43,15 +43,15 @@ class CharactersTableViewController: UITableViewController {
          return cell
     }
     
-        func setImage(heroImage: UIImageView, character: CharactersInfo?) {
-            guard let character = character else { return }
-            let fullPath = (character.thumbnail?.path ?? "") + "/portrait_xlarge." + (character.thumbnail?.imageExtension ?? "jpg")
-            if let imageUrl = URL(string: fullPath) {
-                 heroImage.sd_setImage(with: imageUrl)
-             } else {
-                 heroImage.image = nil
-             }
-        }
+    private func setImage(heroImage: UIImageView, character: CharactersInfo?) {
+        guard let character = character else { return }
+        let fullPath = (character.thumbnail?.path ?? "") + "/portrait_xlarge." + (character.thumbnail?.imageExtension ?? "jpg")
+        if let imageUrl = URL(string: fullPath) {
+             heroImage.sd_setImage(with: imageUrl)
+         } else {
+             heroImage.image = nil
+         }
+    }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
           if let destination = segue.destination as? SecondViewController {
